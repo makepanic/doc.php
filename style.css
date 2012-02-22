@@ -215,3 +215,34 @@ a.git:hover{
 .page img{
 	margin:20px 0;
 }
+@media all and (max-width: 700px) and (min-width: 0px) {
+	.wrapper{
+		width:100%;
+	}
+	.page ol, .page ul {
+		padding-left:0;
+	}
+	.page{
+		padding:10px;
+	}
+	pre{
+		white-space:pre-wrap;
+	}
+}
+@media all and (max-width: 400px) and (min-width: 0px) {
+	.top .wrapper>*{
+		float:none;
+		text-align:center;
+		padding:10px 0;
+	}
+	.tree li{
+		display:block;
+		padding:10px 0;
+	}
+	.top{
+		position:relative;
+	}
+	.back .wrapper{
+		padding:30px 0;
+	}
+}
