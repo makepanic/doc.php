@@ -54,7 +54,7 @@ body{
 	height:100%;
 	line-height: 1;
 	font-size: 0.63em;
-	font-family:Helvetica,Arial,sans-serif;
+	font-family:"Helvetica CE",Helvetica,Arial,sans-serif;
 }
 label{
 	display:block;
@@ -77,10 +77,8 @@ a.git:hover{
 	position:fixed;
 }
 .top .wrapper>*{
-	padding:15px 0;
-}
-.top .wrapper>*{
 	display:block;
+	padding:15px 0;
 	float:left;
 	margin:0 10px;
 }
