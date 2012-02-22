@@ -9,7 +9,7 @@ $template='<html lang="de">
 		<div class="top full dark">
 			<div class="wrapper">
 				<h1>doc.php</h1>
-				<a class="git" href="#">@github</a>
+				<a class="git" href="https://github.com/makepanic/doc.php">@github</a>
 				<ul class="tree">
 					%%NAVIGATION%%
 				</ul>
