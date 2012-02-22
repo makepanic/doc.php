@@ -76,7 +76,7 @@ a.git:hover{
 .top{
 	position:fixed;
 }
-.top .wrapper{
+.top .wrapper>*{
 	padding:15px 0;
 }
 .top .wrapper>*{
@@ -92,7 +92,7 @@ a.git:hover{
 	color:#fff;
 }
 .nil{
-	clear:both;
+	clear:both !important;
 }
 .full{
 	width:100%;
