@@ -9,6 +9,7 @@ define('MAX_NAV',4);
 define('SHORTEN_NAV',15);
 define('HTACCESS',false); //TODO
 define('DOTDOT',false); //only change if you want to allow going up in the file hierarchy
+define('IMAGES','png|jpg|jpeg|gif');
 
 require(LIB.'wiki.class.php');
 require(LIB.'file.class.php');

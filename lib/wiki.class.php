@@ -28,6 +28,20 @@ class Wiki{
 		}
 		return $link;
 	}
+	public static function isImageFile($extension){
+		$special = false;
+		if(!(strpos(IMAGES, $extension)===false)){
+			$special = true;
+		}
+		return $special;
+	}
+	public static function isOpenFile($extension){
+		$special = false;
+		if(!(strpos(OPEN_FILES, $extension)===false)){
+			$special = true;
+		}
+		return $special;
+	}
 	private static function loadFolder($path){
 		$dir=scandir($path->getFullString(true));
 		$folderArray=array();
@@ -76,7 +90,8 @@ class Wiki{
 			//Keine Datei
 			$arrLength=count($_GET);
 			for($i=0;$i<$arrLength;$i++){
-				if($_GET[$i]==".." && !DOTDOT)die ("no .. allowed");
+				$get=$_GET[$i];
+				if(($get==".." || $get==".") && !DOTDOT)die ("no DOTS allowed");
 				array_push($path, $_GET[$i]);
 			}
 			$path=new File($path,"");

@@ -149,6 +149,10 @@ a.git:hover{
 	display:block;
 	padding:15px 10px;
 }
+.fm .jump{
+	font-weight:bold;
+	text-align:center;
+}
 .fm .folder{
 	background:#fff3e6;
 	border:1px solid #eec7bb;
@@ -214,6 +218,7 @@ a.git:hover{
 }
 .page img{
 	margin:20px 0;
+	max-width:100%;
 }
 @media all and (max-width: 700px) and (min-width: 0px) {
 	.wrapper{

@@ -8,7 +8,12 @@ class View{
 		$type=$path->getType();
 		switch($type){
 			case 0:
+			//DIRECTORY
 				$text='<ul class="fm">';
+				if(count($path->getPath())>0){
+					$link=wiki::makeLink($path,count($path->getPath())-1);
+					$text.='<li class="jump"><a href="'.$link.'">folder up</a></li>';
+				}
 				for($i=0;$i<count($content);$i++){
 					$obj=$content[$i];
 					$tp=$obj->getTypeString();
@@ -17,8 +22,13 @@ class View{
 				$text.='</ul>';
 				break;
 			case 1:
-				//Change this line if you want to modify the parser
-				$text=Markdown($content);
+			//FILE
+				$ext = $path->getFileType();
+				if(Wiki::isImageFile($ext)){
+					$text='<img src="'.$path->getFullString(true).'" alt="#"/>';
+				}else{
+					$text=Markdown($content);
+				}
 				$text='<b class="center">'.$path->getName().'</b>'.$text;
 				break;
 		}

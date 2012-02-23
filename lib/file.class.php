@@ -3,6 +3,7 @@ class File{
 	private $name;
 	private $path;
 	private $pathString;
+    private $fileType=null;
 	private $type=-1;
 	public function __construct($path,$name){
 		$this->name=$name;
@@ -26,10 +27,14 @@ class File{
     	if(is_dir($location)){
     		$this->type=0;
     	}elseif(is_file($location)){
+            $this->fileType=$this->getFileExtension($this->name); 
     		$this->type=1;
     	}else{
     		die("no valid object");
     	}
+    }
+    private function getFileExtension($file_name){
+        return substr(strrchr($file_name,'.'),1);
     }
     private function parsePath($path){
     	if(is_array($path)){
@@ -75,6 +80,9 @@ class File{
     }
     public function getPathString(){
     	return $this->pathString;
+    }
+    public function getFileType(){
+        return $this->fileType;
     }
 }
 ?>
