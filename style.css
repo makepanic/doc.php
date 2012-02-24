@@ -49,7 +49,7 @@ a{
 	-ms-transition:color .2s;
 }
 body{
-	background:#333;
+	background:#fff;
 	color:#444;
 	height:100%;
 	line-height: 1;
@@ -67,7 +67,7 @@ h1{
 a.git{
 	font-size:1.2em;
 	line-height:2.1em;
-	color:#666;
+	color:#aaa;
 	font-style:italic;
 }
 a.git:hover{
@@ -99,22 +99,19 @@ a.git:hover{
 	width:800px;
 	margin:0 auto;
 }
-.tree{
-}
 .tree li{
 	display:inline-block;
-	padding:4px 10px;
 	border-left:1px solid #333;
 }
 .tree li:first-child{
 	border-left:0;
 }
-.tree li:last-child{
-}
 .tree li a:hover{
 	color:#aaa;
 }
 .tree li a{
+	padding:4px 10px;
+	display:block;
 	font-size:1.5em;
 	color:#fff;
 }
@@ -124,12 +121,13 @@ a.git:hover{
 	color:#f9a785;
 }
 .back .wrapper{
-	padding:70px 0 30px 0;
+	padding-top:54px;
 }
 .page{
 	background:#fff;
-	padding:50px;
+	padding:30px 0;
 	color:#444;
+	padding:10px;
 }
 .page b.center{
 	text-align: center;
@@ -140,26 +138,30 @@ a.git:hover{
 	margin-top:0;
 	font-size:1.4em;
 }
-.fm{
+.page ul.fm{
 	list-style-type: none;
-	font-size:1.6em;
+	font-size:1.7em;
+	padding-left:0px;
+	margin:0;
 }
 .fm li a{
 	border-bottom:0;
 	display:block;
 	padding:15px 10px;
 }
+.page .fm li{
+	margin:0;
+	border-bottom:1px solid #eee;
+}
+.page .fm li:last-child{
+	border:0;
+}
 .fm .jump{
 	font-weight:bold;
 	text-align:center;
 }
 .fm .folder{
-	background:#fff3e6;
-	border:1px solid #eec7bb;
-}
-.fm .file{
-	background:#fbfbfb;
-	border:1px solid #eee;
+	background:#fffbf6;
 }
 .fm .file a{
 	color:#444;
@@ -168,7 +170,7 @@ a.git:hover{
 .page h2{
 	font-size: 2em;
 	line-height: 1.8em;
-	margin: 2.5em 0px 1em;
+	margin-top:2.5em;
 	color:#111;
 }
 .page h3{
@@ -188,7 +190,7 @@ a.git:hover{
 	border-bottom:1px solid #cc2a2a;
 }
 .page a:hover{
-	background:#fff;
+	background:#fafafa;
 }
 .page pre{
 	background-color: inherit;
@@ -213,6 +215,9 @@ a.git:hover{
 	margin:20px 10px;
 	padding-left: 1.5em;
 }
+.page ul{
+	font-size: 1.4em;
+}
 .page li{
 	margin:10px 0;
 }
@@ -220,15 +225,12 @@ a.git:hover{
 	margin:20px 0;
 	max-width:100%;
 }
-@media all and (max-width: 700px) and (min-width: 0px) {
+@media all and (max-width: 800px) and (min-width: 0px) {
 	.wrapper{
 		width:100%;
 	}
 	.page ol, .page ul {
 		padding-left:0;
-	}
-	.page{
-		padding:10px;
 	}
 	pre{
 		white-space:pre-wrap;
@@ -240,14 +242,20 @@ a.git:hover{
 		text-align:center;
 		padding:10px 0;
 	}
+	a.git{
+		display:none !important;
+	}
+	.tree li a,.tree li.file{
+		padding:10px;
+	}
 	.tree li{
 		display:block;
-		padding:10px 0;
+		border-left:0;
 	}
 	.top{
 		position:relative;
 	}
 	.back .wrapper{
-		padding:30px 0;
+		padding-top: 10px;
 	}
 }

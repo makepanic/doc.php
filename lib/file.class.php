@@ -27,7 +27,7 @@ class File{
     	if(is_dir($location)){
     		$this->type=0;
     	}elseif(is_file($location)){
-            $this->fileType=$this->getFileExtension($this->name); 
+            $this->fileType=pathinfo($location, PATHINFO_EXTENSION);
     		$this->type=1;
     	}else{
     		die("no valid object");

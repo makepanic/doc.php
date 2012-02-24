@@ -30,15 +30,19 @@ class Wiki{
 	}
 	public static function isImageFile($extension){
 		$special = false;
-		if(!(strpos(IMAGES, $extension)===false)){
-			$special = true;
+		if(strlen($extension)>0){
+			if(!(strpos(IMAGES, $extension)===false)){
+				$special = true;
+			}
 		}
 		return $special;
 	}
 	public static function isOpenFile($extension){
 		$special = false;
-		if(!(strpos(OPEN_FILES, $extension)===false)){
-			$special = true;
+		if(strlen($extension)>0){
+			if(!(strpos(OPEN_FILES, $extension)===false)){
+				$special = true;
+			}
 		}
 		return $special;
 	}

@@ -12,7 +12,7 @@ class View{
 				$text='<ul class="fm">';
 				if(count($path->getPath())>0){
 					$link=wiki::makeLink($path,count($path->getPath())-1);
-					$text.='<li class="jump"><a href="'.$link.'">folder up</a></li>';
+					$text.='<li class="jump"><a href="'.$link.'">..</a></li>';
 				}
 				for($i=0;$i<count($content);$i++){
 					$obj=$content[$i];
