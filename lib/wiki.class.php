@@ -95,8 +95,13 @@ class Wiki{
 			$arrLength=count($_GET);
 			for($i=0;$i<$arrLength;$i++){
 				$get=$_GET[$i];
-				if(($get==".." || $get==".") && !DOTDOT)die ("no DOTS allowed");
-				array_push($path, $_GET[$i]);
+				if(isset($_GET[$i]) && !empty($_GET[$i])){
+					if(strpos($_GET[$i],"..")===false){
+						array_push($path, $_GET[$i]);
+					}else if(!DOTDOT){
+						die ("no .. allowed");
+					}
+				}
 			}
 			$path=new File($path,"");
 		}elseif(isset($_GET['file'])){
@@ -105,8 +110,11 @@ class Wiki{
 			if($arrLength>=1){
 				for($i=0;$i<$arrLength-1;$i++){
 					if(isset($_GET[$i]) && !empty($_GET[$i])){
-						if($_GET[$i]==".." && !DOTDOT)die ("no .. allowed");
-						array_push($path, $_GET[$i]);
+						if(strpos($_GET[$i],"..")===false){
+							array_push($path, $_GET[$i]);
+						}else if(!DOTDOT){
+							die ("no .. allowed");
+						}
 					}
 				}
 			}
