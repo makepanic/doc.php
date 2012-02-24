@@ -115,9 +115,8 @@ a.git:hover{
 	font-size:1.5em;
 	color:#fff;
 }
-.tree li.file{
-	font-style:italic;	
-	font-size:1.5em;
+.tree li.file a{
+	font-style:italic;
 	color:#f9a785;
 }
 .back .wrapper{
@@ -229,6 +228,19 @@ a.git:hover{
 	.wrapper{
 		width:100%;
 	}
+	.top{
+		position:relative;
+	}
+	.back .wrapper{
+		padding-top: 10px;
+	}
+	a.git{
+		display:none !important;
+	}
+	.top .wrapper>*{
+		float:none !important;
+		text-align:center;
+	}
 	.page ol, .page ul {
 		padding-left:0;
 	}
@@ -236,14 +248,11 @@ a.git:hover{
 		white-space:pre-wrap;
 	}
 }
-@media all and (max-width: 400px) and (min-width: 0px) {
+@media all and (max-width: 550px) and (min-width: 0px) {
 	.top .wrapper>*{
 		float:none;
 		text-align:center;
 		padding:10px 0;
-	}
-	a.git{
-		display:none !important;
 	}
 	.tree li a,.tree li.file{
 		padding:10px;
@@ -251,11 +260,5 @@ a.git:hover{
 	.tree li{
 		display:block;
 		border-left:0;
-	}
-	.top{
-		position:relative;
-	}
-	.back .wrapper{
-		padding-top: 10px;
 	}
 }

@@ -66,7 +66,7 @@ class View{
 			else{
 				$i=$pathCount-MAX_NAV;
 				$belowMax=false;
-				$links.='<li>...</li>';
+				$links.='<li><a>...</a></li>';
 			}
 			for($i;$i<$pathCount;$i++){
 				$fullName=$path[$i];
@@ -76,7 +76,7 @@ class View{
 				}
 				$links.='<li><a title="'.$fullName.'" href="'.wiki::makeLink($string,$i+1).'">'.$name."</a></li>";
 			}
-			if(strlen($string->getName())>0)$links.='<li class="file">'.$string->getName()."</li>\n";
+			if(strlen($string->getName())>0)$links.='<li class="file"><a>'.$string->getName()."</a></li>\n";
 			return $links;
 		}else die("No path string");
 	}
