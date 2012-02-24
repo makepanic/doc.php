@@ -68,7 +68,7 @@ class Wiki{
 			if($filesize>0){
 				$content=fread($fhandle,$filesize);
 			}else{
-				$content="Datei leer";
+				$content="empty file";
 			}
 		return $content;
 	}

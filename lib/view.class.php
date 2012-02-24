@@ -25,17 +25,16 @@ class View{
 			//FILE
 				$ext = $path->getFileType();
 				if(Wiki::isImageFile($ext)){
-					$text='<img src="'.$path->getFullString(true).'" alt="#"/>';
+					$text='<img class="img" src="'.$path->getFullString(true).'" alt="#"/>';
 				}else{
 					$text=Markdown($content);
 				}
-				$text='<b class="center">'.$path->getName().'</b>'.$text;
 				break;
 		}
 		return static::parseView($nav,$type,$title,$text);
 	}
 	public static function loadTemplate(){
-		include('page.php');
+		include(LIB.'page.php');
 		return $template;
 	}	
 	private static function makeTitle($path){
@@ -91,6 +90,7 @@ class View{
 			$template=str_replace('%%TEXT%%',$content,$template);
 			$template=str_replace('%%PAGETITLE%%',$title,$template);
 		}
+		$template=str_replace('%%STYLE%%',STYLE,$template);
 		return $template;
 	}
 }

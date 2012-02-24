@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 define('LIB','lib/');
+define('STYLE',LIB.'style.css');
 define('ROOT_DIR','demo');
 define('ROOT_FILE',$_SERVER['PHP_SELF']);
 define('MAX_NAV',4);
