@@ -28,24 +28,6 @@ class Wiki{
 		}
 		return $link;
 	}
-	public static function isImageFile($extension){
-		$special = false;
-		if(strlen($extension)>0){
-			if(!(strpos(IMAGES, $extension)===false)){
-				$special = true;
-			}
-		}
-		return $special;
-	}
-	public static function isOpenFile($extension){
-		$special = false;
-		if(strlen($extension)>0){
-			if(!(strpos(OPEN_FILES, $extension)===false)){
-				$special = true;
-			}
-		}
-		return $special;
-	}
 	private static function loadFolder($path){
 		$dir=scandir($path->getFullString(true));
 		$folderArray=array();

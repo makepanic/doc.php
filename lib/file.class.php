@@ -5,6 +5,7 @@ class File{
 	private $pathString;
     private $fileType=null;
 	private $type=-1;
+    private $fileString="";
 	public function __construct($path,$name){
 		$this->name=$name;
 		$this->path=$this->parsePath($path);
@@ -29,9 +30,25 @@ class File{
     	}elseif(is_file($location)){
             $this->fileType=pathinfo($location, PATHINFO_EXTENSION);
     		$this->type=1;
+            $this->makeFileString();
     	}else{
     		die("no valid object");
     	}
+    }
+    private function makeFileString(){
+        if($this->type==1){
+            //check if image file
+            if(strlen($this->fileType)>0){
+                //add filters for more filterstrings
+                if(!(strpos(IMAGES, $this->fileType)===false)){
+                    $this->fileString="image";
+                }else{
+                    $this->fileString="file";
+                }
+            }else{
+                $this->fileString="file";
+            }
+        }
     }
     private function getFileExtension($file_name){
         return substr(strrchr($file_name,'.'),1);
@@ -67,7 +84,7 @@ class File{
                 return "folder";
                 break;
             case 1:
-                return "file";
+                return $this->fileString;
                 break;
         }
         die("can't get filetype");

@@ -145,11 +145,30 @@ a.git:hover{
 }
 .fm li a{
 	border-bottom:0;
+	padding:15px;
 	display:block;
-	padding:15px 10px;
+	margin-left:45px;
+}
+.fm li span{
+	width:17px;
+	height:17px;
+	position:absolute;
+	left:0;
+	margin:15px;
+	background:url(icon.gif) no-repeat;
+}
+.fm .folder span{
+	background-position:-17px 0;
+}
+.fm .file span{
+	background-position:-34px 0;
+}
+.fm .image span{
+	background-position:0px 0;
 }
 .page .fm li{
 	margin:0;
+	position:relative;
 	border-bottom:1px solid #eee;
 }
 .page .fm li:last-child{
@@ -162,7 +181,7 @@ a.git:hover{
 .fm .folder{
 	background:#fffbf6;
 }
-.fm .file a{
+.fm .file a,.fm .image a{
 	color:#444;
 }
 /*MARKDOWN style*/

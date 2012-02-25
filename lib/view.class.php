@@ -17,14 +17,14 @@ class View{
 				for($i=0;$i<count($content);$i++){
 					$obj=$content[$i];
 					$tp=$obj->getTypeString();
-					$text.='<li class="'.$tp.'"><a href="'.wiki::makeLink($obj).'">'.$obj->getName().'</a></li>';
+					$text.='<li class="'.$tp.'"><span></span><a href="'.wiki::makeLink($obj).'">'.$obj->getName().'</a></li>';
 				}
 				$text.='</ul>';
 				break;
 			case 1:
 			//FILE
 				$ext = $path->getFileType();
-				if(Wiki::isImageFile($ext)){
+				if($path->getTypeString()=='image'){
 					$text='<img class="img" src="'.$path->getFullString(true).'" alt="#"/>';
 				}else{
 					$text=Markdown($content);
