@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration:none;
+	transition:color .2s;
+	-o-transition:color .2s;
+	-moz-transition:color .2s;
+	-webkit-transition:color .2s;
+	-ms-transition:color .2s;
+}
+body{
+	background:#f0f0f0;
+	color:#444;
+	height:100%;
+	line-height: 1;
+	font-size: 0.63em;
+	font-family:"Helvetica CE",Helvetica,Arial,sans-serif;
+}
+label{
+	display:block;
+}
+h1{
+	font-weight:bold;
+	color:#f5733c;
+	font-size:2.5em;
+}
+a.git{
+	font-size:1.2em;
+	line-height:2.1em;
+	color:#aaa;
+	font-style:italic;
+}
+a.git:hover{
+	color:#eee;
+}
+.top{
+	position:fixed;
+}
+.top .wrapper>*{
+	display:block;
+	padding:15px 0;
+	float:left;
+	margin:0 10px;
+}
+.top .wrapper>*:first-child{
+	margin-left:0;
+}
+.dark{
+	background:#272727;
+	color:#fff;
+}
+.nil{
+	clear:both !important;
+        padding:0 !important;
+        margin:0 !important;
+        position:static !important;
+}
+.full{
+	width:100%;
+}
+.wrapper{
+	width:800px;
+	margin:0 auto;
+}
+.tree li{
+	display:inline-block;
+	border-left:1px solid #333;
+}
+.tree li:first-child{
+	border-left:0;
+}
+.tree li a:hover{
+	color:#aaa;
+}
+.tree li a{
+	padding:4px 10px;
+	display:block;
+	font-size:1.5em;
+	color:#fff;
+}
+.tree li.file a{
+	font-style:italic;
+	color:#f9a785;
+}
+.back .wrapper{
+	padding:80px 0 25px 0;
+}
+.page{
+	background:#fff;
+	color:#444;
+	padding:25px;
+	box-shadow: 0px 0px 10px 1px #e2e2e2;
+}
+.page b.center{
+	text-align: center;
+	display:block;
+	font-weight:bold;
+	text-transform: uppercase;
+	color:#aaa;
+	margin-top:0;
+	font-size:1.4em;
+}
+.page ul.fm{
+	list-style-type: none;
+	font-size:1.7em;
+	padding-left:0px;
+	margin:0;
+}
+.fm li a{
+	border-bottom:0;
+	padding:15px;
+	display:block;
+	margin-left:45px;
+}
+.fm li span{
+	width:17px;
+	height:17px;
+	position:absolute;
+	left:0;
+	margin:15px;
+	background:url(icon.gif) no-repeat;
+}
+.fm .folder span{
+	background-position:-17px 0;
+}
+.fm .music span{
+	background-position:-51px 0;
+}
+.fm .audio span{
+	background-position:0px -17px;
+}
+.fm .audio span:hover{
+	cursor: pointer
+}
+.fm .audio a b{
+	color:#888;
+	font-family:monospace;
+	margin:0 10px;
+	font-size:.8em;
+}
+.fm .file span{
+	background-position:-34px 0;
+}
+.fm .image span{
+	background-position:0px 0;
+}
+.page .fm li{
+	margin:0;
+	position:relative;
+	border-bottom:1px solid #eee;
+}
+.page .fm li:last-child{
+	border:0;
+}
+.fm .jump{
+	font-weight:bold;
+	text-align:center;
+}
+.fm .folder{
+	background:#fffbf6;
+}
+.fm .file a,.fm .image a{
+	color:#444;
+}
+.page .media{
+    position:relative;
+}
+.page .media audio{
+    display:none;
+}
+/*MARKDOWN style*/
+.page h2{
+	font-size: 2em;
+	line-height: 1.8em;
+	margin-top:2.5em;
+	color:#111;
+}
+.page h3{
+	font-size: 1.8em;
+	line-height: 1.8em;
+	margin: 2.5em 0px .3em;
+	color:#222;
+}
+.page p{
+	font-size:1.6em;
+	line-height:2em;
+}
+.page a{
+	color:inherit;
+	padding:0 2px;
+	color:#cc2a2a;
+	border-bottom:1px solid #cc2a2a;
+}
+.page a:hover{
+	background:#fafafa;
+}
+.page pre{
+	background-color: inherit;
+	border-bottom: 1px dashed #6B6B6B;
+	border-top: 1px dashed #6B6B6B;
+	color: inherit;
+	font-family: "Bitstream Vera Sans Mono", "Courier", "Monaco", "ProFont", "American Typewriter", "Andale Mono", monospace;
+	line-height: 1.45em;
+	margin: 3em 0px 2.5em;
+	padding:10px;
+}
+.page pre code{
+	font-family: monospace;
+	font-size: 1.4em;
+}
+.page code{
+	font-family: monospace;
+	font-size: .9em;
+}
+.page ol,.page ul{
+	display: block;
+	margin:20px 10px;
+	padding-left: 1.5em;
+}
+.page ul{
+	font-size: 1.4em;
+}
+.page li{
+	margin:10px 0;
+}
+.page img{
+	margin:20px 0;
+	max-width:100%;
+}
+.page img.img{
+	margin:0;
+}
+@media all and (max-width: 800px) and (min-width: 0px) {
+	.wrapper{
+		width:100%;
+	}
+	.top{
+		position:relative;
+	}
+	.back .wrapper{
+		padding-top: 10px;
+	}
+	a.git{
+		display:none !important;
+	}
+	.top .wrapper>*{
+		float:none !important;
+		text-align:center;
+	}
+	.page ol, .page ul {
+		padding-left:0;
+	}
+	pre{
+		white-space:pre-wrap;
+	}
+}
+@media all and (max-width: 550px) and (min-width: 0px) {
+	.top .wrapper>*{
+		float:none;
+		text-align:center;
+		padding:10px 0;
+	}
+	.tree li a,.tree li.file{
+		padding:10px;
+	}
+	.tree li{
+		display:block;
+		border-left:0;
+	}
+}

@@ -6,6 +6,7 @@ class File{
     private $fileType=null;
 	private $type=-1;
     private $fileString="";
+    private $extension=null;
 	public function __construct($path,$name){
 		$this->name=$name;
 		$this->path=$this->parsePath($path);
@@ -40,8 +41,10 @@ class File{
             //check if image file
             if(strlen($this->fileType)>0){
                 //add filters for more filterstrings
-                if(!(strpos(IMAGES, $this->fileType)===false)){
-                    $this->fileString="image";
+                $className=Extension::getClassName($this->fileType);
+                if($className){
+                    $this->extension=new $className();
+                    $this->fileString=$this->extension->getExtensionString();
                 }else{
                     $this->fileString="file";
                 }
@@ -100,6 +103,27 @@ class File{
     }
     public function getFileType(){
         return $this->fileType;
+    }
+    public function getListStyle(){
+        return $this->extension->getListStyle($this);
+    }
+    public function hasDetails(){
+        if($this->fileString=="file"){
+            return true;
+        }else{
+            return $this->extension->allowsDetails();
+        }
+    }
+    public function getDetailCode(){
+        return $this->extension->getDetailCode($this);
+    }
+    public function hasListStyle(){
+        if($this->extension){
+            if($this->extension->hasListLayout()){
+                return true;
+            }
+        }
+        return false;
     }
 }
 ?>
