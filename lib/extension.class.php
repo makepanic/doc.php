@@ -49,7 +49,7 @@ class Extension{
 			return false;
 		}
 	}
-	public function getDetailCode($fileObj=false){
+	public function getDetailCode($fileObj){
 		return "no specific code defined";
 	}
 	public function getExtensionString(){

@@ -8,7 +8,6 @@ class AudioExtension extends Extension{
 		$wireframe='<span class="controls" onclick="play(this)"></span>
                     <audio id="audioPlayer" src="'.$fileObj->getFullString(true).'" preload="auto" autobuffer>no html5 audio support</audio>
                     <a class="title">'.$fileObj->getName().'</a>
-                    
                     <div class="nil"></div>';
         return $wireframe;
 	}

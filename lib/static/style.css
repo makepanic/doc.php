@@ -74,6 +74,7 @@ a.git:hover{
 	color:#eee;
 }
 .top{
+	z-index:2;
 	position:fixed;
 }
 .top .wrapper>*{
@@ -207,6 +208,9 @@ a.git:hover{
 }
 .page .media audio{
     display:none;
+}
+.page video{
+	width:100%;
 }
 /*MARKDOWN style*/
 .page h2{

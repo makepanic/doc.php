@@ -63,7 +63,12 @@ class Wiki{
 				return static::loadFolder($path);
 			}elseif($pathType==1){
 				//ist Datei
-				return static::loadFile($path);
+				if($path->getTypeString()=="file"){
+					//Read file if type = file
+					return static::loadFile($path);
+				}else{
+					return null;
+				}
 				//static::openFile();
 			}else{
 				die($pathStr." not found");

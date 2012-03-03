@@ -1,15 +1,18 @@
 <?php
+//Enable in case of debug
+/*
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+*/
 
-define('LIB','lib/');
-define('STYLE',LIB.'static/style.css');
-define('ROOT_DIR','demo');
-define('ROOT_FILE',$_SERVER['PHP_SELF']);
-define('MAX_NAV',4);
-define('SHORTEN_NAV',15);
+define('LIB','lib/'); //Libary path
+define('STYLE',LIB.'static/style.css'); //Stylesheet path
+define('ROOT_DIR','demo'); //home dir
+define('ROOT_FILE',$_SERVER['PHP_SELF']); //this file
+define('MAX_NAV',4); //maximum of displayed navigaton files
+define('SHORTEN_NAV',15); //char count in nav
 define('HTACCESS',false); //TODO
-define('DOTDOT',true); //only change if you want to allow going up in the file hierarchy
+define('DOTDOT',false); //only change if you want to allow going up in the file hierarchy
 
 require(LIB.'wiki.class.php');
 require(LIB.'file.class.php');
@@ -18,6 +21,7 @@ include_once LIB."markdown.php";
 require(LIB.'notification.class.php');
 require(LIB.'extension.class.php');
 
+//Include all extension files
 Extension::loadExtensions();
 $reqPath = Wiki::parseGET();
 $content = Wiki::loadObj($reqPath);
