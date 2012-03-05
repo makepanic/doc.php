@@ -6,7 +6,7 @@ class CodeExtension extends Extension{
 	public function getDetailCode($fileObj){
 		$code=$fileObj->readFile();
 		//Be careful with XSS
-		return '<pre><code>'.htmlspecialchars($code).'</code></pre>';
+		return '<div class="markdown"><pre><code>'.htmlspecialchars($code).'</code></pre></div>';
 	}
 }
 

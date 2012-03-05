@@ -34,7 +34,7 @@ class View{
                 if($pathString!=='file'){
                     $text=$path->getDetailCode();
                 }else{
-                    $text=Markdown($content);
+                    $text='<div class="markdown">'.Markdown($content).'</div>';
                 }
             }else{
                 $text="<h1>You aren't allowed to view this file</h1>";

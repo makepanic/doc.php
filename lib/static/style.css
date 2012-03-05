@@ -100,7 +100,7 @@ a.git:hover{
 	width:100%;
 }
 .wrapper{
-	width:800px;
+	width:850px;
 	margin:0 auto;
 }
 .tree li{
@@ -129,7 +129,7 @@ a.git:hover{
 .page{
 	background:#fff;
 	color:#444;
-	padding:25px;
+	padding:50px;
 	box-shadow: 0px 0px 10px 1px #e2e2e2;
 }
 .page b.center{
@@ -220,66 +220,69 @@ a.git:hover{
 	width:100%;
 }
 /*MARKDOWN style*/
-.page h2{
-	font-size: 2em;
-	line-height: 1.8em;
-	margin-top:2.5em;
-	color:#111;
-}
-.page h3{
-	font-size: 1.8em;
-	line-height: 1.8em;
-	margin: 2.5em 0px .3em;
-	color:#222;
-}
-.page p{
+.markdown{
 	font-size:1.6em;
-	line-height:2em;
 }
-.page code span{
-	font-size:1.3em;
+.markdown>*{
+	margin:1.5em 0;
 }
-.page a{
-	color:inherit;
-	padding:0 2px;
+.markdown a{
 	color:#cc2a2a;
 	border-bottom:1px solid #cc2a2a;
 }
-.page a:hover{
-	background:#fafafa;
+.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6{
+	font-weight:bold;
 }
-.page pre{
-	background-color: inherit;
-	border-bottom: 1px dashed #6B6B6B;
-	border-top: 1px dashed #6B6B6B;
-	color: inherit;
-	font-family: "Bitstream Vera Sans Mono", "Courier", "Monaco", "ProFont", "American Typewriter", "Andale Mono", monospace;
-	line-height: 1.45em;
-	margin: 3em 0px 2.5em;
-	padding:10px;
+.markdown h1{
+    font-size: 2em;
+    margin: 0.67em 0;
+    color:#444;
 }
-.page pre code{
-	font-family: monospace;
-	font-size: 1.6em;
-	white-space:pre-wrap
+.markdown h2{
+    font-size: 1.5em;
+    margin: 0.83em 0;
 }
-.page ol,.page ul{
-	display: block;
-	margin:20px 10px;
-	padding-left: 1.5em;
+.markdown h3{
+    font-size: 1.17em;
+    margin: 1em 0;
 }
-.page ul{
-	font-size: 1.4em;
+.markdown h4{
+    font-size: 1em;
+    margin: 1.33em 0;
 }
-.page li{
-	margin:10px 0;
+.markdown h5{
+    font-size: 0.83em;
+    margin: 1.67em 0;
 }
-.page img{
-	margin:20px 0;
+.markdown h6{
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+.markdown ul,.markdown ol{
+	padding-left: 1.25em;
+}
+.markdown p{
+	margin: 0px 0px 1.6em;
+	font-family: "HelveticaNeue-Light", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+
+	line-height: 1.8;
+}
+.markdown pre{
+	white-space:pre-wrap;
+	border-top:1px dashed #aaa;
+	border-bottom:1px dashed #aaa;
+	padding:1em 0 1em 10px;
+	font-family:monospace;
+}
+.markdown code{
+	font-size:.9em;
+	font-family:monospace;
+}
+.markdown li{
+	margin:.8em 0;
+}
+.markdown img{
 	max-width:100%;
-}
-.page img.img{
-	margin:0;
 }
 @media all and (max-width: 800px) and (min-width: 0px) {
 	.wrapper{
@@ -298,7 +301,7 @@ a.git:hover{
 		float:none !important;
 		text-align:center;
 	}
-	.page ol, .page ul {
+	.markdown ol, .markdown ul {
 		padding-left:0;
 	}
 	pre{
