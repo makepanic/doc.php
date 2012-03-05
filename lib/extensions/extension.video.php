@@ -10,5 +10,5 @@ class VideoExtension extends Extension{
 }
 
 $ext=new VideoExtension();
-$ext->register(array('mp4','wma','avi'));
+$ext->register(array('mp4','wma','webm','ogg'));
 ?>

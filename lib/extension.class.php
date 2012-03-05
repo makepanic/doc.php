@@ -5,6 +5,7 @@ class Extension{
 	protected $extensionString = "";
 	protected $allowDetail = false;
 	protected $hasListLayout = false;
+	protected $readFile = false;
 	protected static $extCount = 0;
 	protected static $classCount = 0;
 
@@ -48,6 +49,9 @@ class Extension{
 		}else{
 			return false;
 		}
+	}
+	public function readsFile(){
+		return $this->readFile;
 	}
 	public function getDetailCode($fileObj){
 		return "no specific code defined";

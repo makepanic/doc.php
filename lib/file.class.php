@@ -7,6 +7,26 @@ class File{
 	private $type=-1;
     private $fileString="";
     private $extension=null;
+
+    public function readFile(){
+        $pathStr=$this->getFullString(true);
+        $fhandle=fopen($pathStr,"r");
+        $filesize=filesize($pathStr);
+        if($filesize>0){
+            $content=fread($fhandle,$filesize);
+        }else{
+            $content="empty file";
+        }
+        return $content;
+    }
+    public function getContent(){
+        if($this->extension){
+            return $this->extension->getParsedContent($this);
+        }else{
+            return $this->readFile();
+        }
+        
+    }
 	public function __construct($path,$name){
 		$this->name=$name;
 		$this->path=$this->parsePath($path);
@@ -91,6 +111,9 @@ class File{
                 break;
         }
         die("can't get filetype");
+    }
+    public function needToReadFile(){
+        return $this->extension->readsFile();
     }
     public function getName(){
     	return $this->name;

@@ -152,6 +152,7 @@ a.git:hover{
 	padding:15px;
 	display:block;
 	margin-left:45px;
+	color:#444;
 }
 .fm li span{
 	width:17px;
@@ -166,6 +167,12 @@ a.git:hover{
 }
 .fm .music span{
 	background-position:-51px 0;
+}
+.fm .code span{
+	background-position:-68px 0;
+}
+.fm .video span{
+	background-position:-84px 0;
 }
 .fm .audio span{
 	background-position:0px -17px;
@@ -200,8 +207,8 @@ a.git:hover{
 .fm .folder{
 	background:#fffbf6;
 }
-.fm .file a,.fm .image a{
-	color:#444;
+.fm .folder a{
+	color:#CC2A2A;;
 }
 .page .media{
     position:relative;
@@ -229,6 +236,9 @@ a.git:hover{
 	font-size:1.6em;
 	line-height:2em;
 }
+.page code span{
+	font-size:1.3em;
+}
 .page a{
 	color:inherit;
 	padding:0 2px;
@@ -250,11 +260,8 @@ a.git:hover{
 }
 .page pre code{
 	font-family: monospace;
-	font-size: 1.4em;
-}
-.page code{
-	font-family: monospace;
-	font-size: .9em;
+	font-size: 1.6em;
+	white-space:pre-wrap
 }
 .page ol,.page ul{
 	display: block;

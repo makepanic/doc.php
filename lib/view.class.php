@@ -16,7 +16,6 @@ class View{
                 $text.='<li class="jump"><a href="'.$link.'">..</a></li>';
             }
             for($i=0;$i<count($content);$i++){
-
                 $obj=$content[$i];
                 $tp=$obj->getTypeString();
                 if($obj->hasListStyle()){
