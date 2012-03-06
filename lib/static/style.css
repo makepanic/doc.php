@@ -154,6 +154,9 @@ a.git:hover{
 	margin-left:45px;
 	color:#444;
 }
+.fm li.jump a{
+	margin-left:0;
+}
 .fm li span{
 	width:17px;
 	height:17px;
@@ -264,7 +267,6 @@ a.git:hover{
 .markdown p{
 	margin: 0px 0px 1.6em;
 	font-family: "HelveticaNeue-Light", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-
 	line-height: 1.8;
 }
 .markdown pre{
@@ -301,6 +303,13 @@ a.git:hover{
 		float:none !important;
 		text-align:center;
 	}
+	.page{
+		padding:25px;
+		font-size:.9em;
+	}
+	.markdown p{
+		line-height:1.7em;
+	}
 	.markdown ol, .markdown ul {
 		padding-left:0;
 	}
@@ -313,6 +322,10 @@ a.git:hover{
 		float:none;
 		text-align:center;
 		padding:10px 0;
+	}
+	.page{
+		padding:25px;
+		font-size:.72em;
 	}
 	.tree li a,.tree li.file{
 		padding:10px;

@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 */
 
-define('ROOT_DIR','demo'); //home dir
+define('ROOT_DIR','docs'); //home dir
 define('MAX_NAV',4); //maximum of displayed navigaton files
 define('SHORTEN_NAV',15); //char count in nav
 

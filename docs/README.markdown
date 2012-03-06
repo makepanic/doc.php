@@ -19,7 +19,7 @@ doc.php was created by [@makepanic](https://twitter.com/makepanic).
 ###Additional Config
 open `index.php` and modify the define() commands if you want
 
-	ROOT_DIR:	 default: `docphp`
+	ROOT_DIR:	 default: `docs`
 				 this string sets the root folder for your docphp presentation
 	MAX_NAV :	 default: `4`
 				 number of breadcrumbs to dispay in the top navigation
