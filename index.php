@@ -5,13 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 */
 
-define('ROOT_DIR','docs'); //home dir
-define('MAX_NAV',4); //maximum of displayed navigaton files
-define('SHORTEN_NAV',15); //char count in nav
-
-/*DO NOT EDIT BELOW THIS COMMENT*/
-
-define('LIB','lib/'); //Libary path
+require('config.php');
 
 define('STYLE',LIB.'static/style.css'); //Stylesheet file path
 define('SCRIPT',LIB.'static/script.js'); //Javascript file path

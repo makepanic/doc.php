@@ -10,8 +10,7 @@ $template='<html lang="de">
 	<body>
 		<div class="top full dark">
 			<div class="wrapper">
-				<h1>doc.php</h1>
-				<a class="git" href="https://github.com/makepanic/doc.php">@github</a>
+				<h1>%%DOCTITLE%%</h1>
 				<ul class="tree">
 					%%NAVIGATION%%
 				</ul>
@@ -20,9 +19,10 @@ $template='<html lang="de">
 		<div class="full back">
 			<div class="wrapper">
 				<div class="page">%%TEXT%%</div>
+				<a class="git" href="https://github.com/makepanic/doc.php">doc.php on github</a>
 			</div>
 		</div>
-        <script src="%%SCRIPT%%"></script>
+		<script src="%%SCRIPT%%"></script>
 	</body>
 </html>
 ';

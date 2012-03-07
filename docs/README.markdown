@@ -12,19 +12,21 @@ doc.php was created by [@makepanic](https://twitter.com/makepanic).
 
 ##Installation
 1. download [doc.php](https://github.com/makepanic/doc.php) from github.
-2. extract `index.php` and the `lib` folder on your php enabled server
+2. extract `index.php` , `config.php` and the `lib` folder on your php enabled server
 3. create a subfolder for your filesystem, default:`docphp`
 4. copy all the files you want to use in doc.php into the created folder
 
 ###Additional Config
-open `index.php` and modify the define() commands if you want
+open `config.php` and modify the define() commands if you want
 
-	ROOT_DIR:	 default: `docs`
+	DOC_TITLE:   default: 'doc.php'
+				 this string sets the title of the navigation bar
+	ROOT_DIR:	 default: 'docs'
 				 this string sets the root folder for your docphp presentation
-	MAX_NAV :	 default: `4`
-				 number of breadcrumbs to dispay in the top navigation
-	SHORTEN_NAV: default: `15`
-				 number of maximum folder length in the top navigation
+	MAX_NAV :	 default: '4'
+				 maximum number of breadcrumbs to dispay in the top navigation
+	SHORTEN_NAV: default: '15'
+				 maximum number of characters in the top navigation per folder
 
 ###License
 [WTFPL](http://sam.zoy.org/wtfpl/)

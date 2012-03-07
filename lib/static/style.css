@@ -69,9 +69,11 @@ a.git{
 	line-height:2.1em;
 	color:#aaa;
 	font-style:italic;
+	margin:10px;
+	display:block;
 }
 a.git:hover{
-	color:#eee;
+	color:#666;
 }
 .top{
 	z-index:2;
