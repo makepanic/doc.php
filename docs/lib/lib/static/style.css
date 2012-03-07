@@ -147,20 +147,9 @@ a.git:hover{
 	padding-left:0px;
 	margin:0;
 }
-.fm.big li{
+.fm li{
 	display:inline-block;
-	height:200px;
 	width:25%;
-}
-.fm.big li span{
-	margin:0 auto;
-	display:block;
-	position:relative;
-}
-.fm.big li a{
-	margin-left:0;
-	display:block;
-	text-align:center;
 }
 .fm li a{
 	border-bottom:0;

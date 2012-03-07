@@ -9,8 +9,7 @@ class View{
         switch($type){
         case 0:
             //DIRECTORY
-            $viewType='';
-            $text='<ul class="fm'.$viewType.'">';
+            $text='<ul class="fm">';
             if(count($path->getPath())>0){
                 //Display .. if not root dir
                 $link=wiki::makeLink($path,count($path->getPath())-1);
@@ -96,7 +95,6 @@ class View{
         $template=str_replace('%%TEXT%%',$content,$template);
         $template=str_replace('%%PAGETITLE%%',$title,$template);
         $template=str_replace('%%STYLE%%',STYLE,$template);
-        $template=str_replace('%%SCRIPT%%',SCRIPT,$template);
         return $template;
     }
 }

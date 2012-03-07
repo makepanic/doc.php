@@ -22,7 +22,7 @@ $template='<html lang="de">
 				<div class="page">%%TEXT%%</div>
 			</div>
 		</div>
-        <script src="%%SCRIPT%%"></script>
+                <script src="lib/static/script.js"></script>
 	</body>
 </html>
 ';

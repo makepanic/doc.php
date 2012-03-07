@@ -12,8 +12,11 @@ define('SHORTEN_NAV',15); //char count in nav
 /*DO NOT EDIT BELOW THIS COMMENT*/
 
 define('LIB','lib/'); //Libary path
-define('STYLE',LIB.'static/style.css'); //Stylesheet path
+
+define('STYLE',LIB.'static/style.css'); //Stylesheet file path
+define('SCRIPT',LIB.'static/script.js'); //Javascript file path
 define('ROOT_FILE',$_SERVER['PHP_SELF']); //this file
+
 define('HTACCESS',false); //TODO
 define('DOTDOT',false); //only change if you want to allow going up in the file hierarchy
 
