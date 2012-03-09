@@ -14,5 +14,5 @@ class AudioExtension extends Extension{
 }
 
 $ext=new AudioExtension();
-$ext->register(array('wav','mp3'));
+$ext->register(array('wav','mp3','ogg'));
 ?>
