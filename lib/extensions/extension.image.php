@@ -9,5 +9,5 @@ class ImageExtension extends Extension{
 }
 
 $ext=new ImageExtension();
-$ext->register(array('jpg','gif','png'));
+$ext->register(array('jpg','jpeg','gif','png','apng','bmp'));
 ?>
