@@ -5,10 +5,10 @@ class VideoExtension extends Extension{
 
 	//COMING SOON tm
 	public function getDetailCode($fileObj){
-		return '<video src="'.$fileObj->getFullString(true).'" controls preload="auto">no html5 video support</video>';
+		return '<div class="center"><video src="'.$fileObj->getFullString(true).'" controls preload="auto">no html5 video support</video></div>';
 	}
 }
 
 $ext=new VideoExtension();
-$ext->register(array('mp4','wma','webm','ogg'));
+$ext->register(array('mp4','wma','webm','ogg','ogv'));
 ?>

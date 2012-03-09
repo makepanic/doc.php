@@ -40,6 +40,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+*{
+	outline:none;
+}
 a{
 	text-decoration:none;
 	transition:color .2s;
@@ -68,12 +71,14 @@ a.git{
 	font-size:1.2em;
 	line-height:2.1em;
 	color:#aaa;
-	font-style:italic;
 	margin:10px;
 	display:block;
 }
 a.git:hover{
 	color:#666;
+}
+.center{
+	text-align:center;
 }
 .top{
 	z-index:2;
@@ -237,7 +242,7 @@ a.git:hover{
     display:none;
 }
 .page video{
-	width:100%;
+	max-width:100%;
 }
 /*MARKDOWN style*/
 .markdown{

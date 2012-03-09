@@ -4,7 +4,7 @@ class ImageExtension extends Extension{
 	protected $extensionString = 'image';
 
 	public function getDetailCode($fileObj){
-		return '<div class="markdown"><img src="'.$fileObj->getFullString(true).'" alt="#"/></div>';
+		return '<div class="markdown center"><img src="'.$fileObj->getFullString(true).'" alt="#"/></div>';
 	}
 }
 
