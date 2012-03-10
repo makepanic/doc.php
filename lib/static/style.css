@@ -112,7 +112,7 @@ a.git:hover{
 }
 .tree li{
 	display:inline-block;
-	border-left:1px solid #333;
+	border-left:1px solid #666;
 }
 .tree li:first-child{
 	border-left:0;
@@ -120,11 +120,14 @@ a.git:hover{
 .tree li a:hover{
 	color:#aaa;
 }
+.tree li:last-child a{
+	color:#fff;
+}
 .tree li a{
 	padding:4px 10px;
 	display:block;
 	font-size:1.5em;
-	color:#fff;
+	color:#777;
 }
 .tree li.file a{
 	font-style:italic;

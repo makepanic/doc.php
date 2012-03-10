@@ -42,7 +42,7 @@ class View{
             }
             break;
         }
-        return static::parseView($nav,$type,$title,$text);
+        return static::parseView($nav,$title,$text);
     }
     public static function loadTemplate(){
         include(LIB.'page.php');
@@ -90,7 +90,7 @@ class View{
             return $links;
         }else die("No path string");
     }
-    public static function parseView($nav,$type,$title,$content){
+    public static function parseView($nav,$title,$content){
         $template=static::loadTemplate();
         $template=str_replace('%%NAVIGATION%%',$nav,$template);
         $template=str_replace('%%TEXT%%',$content,$template);

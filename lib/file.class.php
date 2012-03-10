@@ -53,7 +53,7 @@ class File{
     		$this->type=1;
             $this->makeFileString();
     	}else{
-    		die("no valid object");
+            Notification::Error('File does not exist.');
     	}
     }
     private function makeFileString(){
@@ -96,7 +96,8 @@ class File{
 				array_push($tmpArray, $tmp[$i]);
 			}
 			return $tmpArray;
-		}else die("no valid path format (array|string)");
+		}else 
+            Notification::Error('No valid path format. Only Array or String allowed.');
     }
     public function getType(){
         return $this->type;
@@ -110,7 +111,7 @@ class File{
                 return $this->fileString;
                 break;
         }
-        die("can't get filetype");
+        Notification::Error("Something is wrong with the File type.");
     }
     public function needToReadFile(){
         return $this->extension->readsFile();
@@ -141,10 +142,9 @@ class File{
         return $this->extension->getDetailCode($this);
     }
     public function hasListStyle(){
-        if($this->extension){
-            if($this->extension->hasListLayout()){
+        //check if extension object exists and if this object has a special list layout
+        if($this->extension && $this->extension->hasListLayout()){
                 return true;
-            }
         }
         return false;
     }

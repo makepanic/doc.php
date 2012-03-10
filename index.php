@@ -12,7 +12,6 @@ define('SCRIPT',LIB.'static/script.js'); //Javascript file path
 define('ROOT_FILE',$_SERVER['PHP_SELF']); //this file
 
 define('HTACCESS',false); //TODO
-define('DOTDOT',false); //only change if you want to allow going up in the file hierarchy
 
 require(LIB.'wiki.class.php');
 require(LIB.'file.class.php');
