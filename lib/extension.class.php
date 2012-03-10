@@ -20,11 +20,11 @@ class Extension{
 			Notification::Error('Extension bereits vorhanden');
 		}else{
 			if(is_string($extension)){
-				static::$extArray[static::$extCount++]=$extension;
+				static::$extArray[static::$extCount++]=strtolower($extension);
 				static::$classArray[static::$classCount++]=get_class($this);	
 			}elseif(is_array($extension)){
 				for($i=0;$i<count($extension);$i++){
-					static::$extArray[static::$extCount++]=$extension[$i];
+					static::$extArray[static::$extCount++]=strtolower($extension[$i]);
 					static::$classArray[static::$classCount++]=get_class($this);
 				}
 			}
@@ -37,13 +37,14 @@ class Extension{
 		return $this->hasListLayout;
 	}
 	private static function exists($string){
-		if(in_array($string, static::$extArray)){
+		if(in_array(strtolower($string), static::$extArray)){
 			return true;
 		}else{
 			return false;
 		}
 	}
 	public static function getClassName($string){
+		$string=strtolower($string);
 		if(static::exists($string)){
 			return static::$classArray[array_search($string, static::$extArray)];
 		}else{

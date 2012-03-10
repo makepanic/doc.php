@@ -327,6 +327,7 @@ a.git:hover{
 	.top .wrapper>*{
 		float:none !important;
 		text-align:center;
+		margin:0;
 	}
 	.page{
 		padding:25px;
