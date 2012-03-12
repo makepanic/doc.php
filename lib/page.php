@@ -7,8 +7,8 @@ $template='<html lang="de">
 		<title>%%PAGETITLE%%</title>
 		<link rel="stylesheet" type="text/css" title="" media="all" href="%%STYLE%%" />
 	</head>
-	<body>
-		<div class="top full dark">
+	<body class="%%THEME%%bg">
+		<div class="top full %%THEME%%">
 			<div class="wrapper">
 				<h1>%%DOCTITLE%%</h1>
 				<ul class="tree">

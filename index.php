@@ -5,6 +5,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 */
 
+define('DOCPHP_VERSION',1.0);
+
 require('config.php');
 
 define('STYLE',LIB.'static/style.css'); //Stylesheet file path

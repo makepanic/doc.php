@@ -98,6 +98,7 @@ class View{
         $template=str_replace('%%DOCTITLE%%',DOC_TITLE,$template);
         $template=str_replace('%%STYLE%%',STYLE,$template);
         $template=str_replace('%%SCRIPT%%',SCRIPT,$template);
+        $template=str_replace('%%THEME%%',THEME,$template);
         return $template;
     }
 }

@@ -52,7 +52,7 @@ a{
 	-ms-transition:color .2s;
 }
 body{
-	background:#f0f0f0;
+	background:#ededed;
 	color:#444;
 	height:100%;
 	line-height: 1;
@@ -62,10 +62,12 @@ body{
 label{
 	display:block;
 }
-h1{
-	font-weight:bold;
-	color:#f5733c;
-	font-size:2.5em;
+.top h1{
+	text-indent:-9999px;
+	width:43px;
+	height:10px;
+	display:block;
+	margin:17px 10px 17px 10px;
 }
 a.git{
 	font-size:1.2em;
@@ -81,27 +83,87 @@ a.git:hover{
 	text-align:center;
 }
 .top{
+	height:43px;
 	z-index:2;
+	display:block;
 	position:fixed;
 }
 .top .wrapper>*{
 	display:block;
-	padding:15px 0;
 	float:left;
-	margin:0 10px;
 }
-.top .wrapper>*:first-child{
-	margin-left:0;
+.darkbg{
+	background:#ededed;
+}
+.lightbg{
+	background:#f7f7f7;
 }
 .dark{
-	background:#272727;
 	color:#fff;
+	border-top:2px solid #ffa273;
+	border-bottom:2px solid #090909;
+	box-shadow:inset 0 3px 1px #434342;
+	background:#2b2a29;
+	background:linear-gradient(top,#393837,#292827);
+	background:-o-linear-gradient(top,#393837,#292827);
+	background:-moz-linear-gradient(top,#393837,#292827);
+	background:-webkit-linear-gradient(top,#393837,#292827);
+	background:-ms-linear-gradient(top,#393837,#292827);
+}
+.dark h1{
+	background:url(logo.gif) no-repeat center 0;
+}
+.dark .tree li a{
+	color:#ccc;
+}
+.dark .tree li{
+	border-left:1px solid rgba(28,28,28,.5);
+	border-right:1px solid rgba(75,75,75,.5);
+}
+.dark .tree li:last-child a{
+	color:#eee;
+}
+.dark .tree li a:hover{
+	color:#fff;
+}
+.dark .tree li.file a{
+	color:#ffa273;
+}
+.light{
+	color:#fff;
+	border-top:2px solid #db6123;
+	box-shadow:inset 0 1px 0 #fff,0 2px 2px #ddd;
+	background:#f4f4f4;
+	background:-linear-gradient(top,#fff,#f1f1f1);
+	background:-o-linear-gradient(top,#fff,#f1f1f1);
+	background:-moz-linear-gradient(top,#fff,#f1f1f1);
+	background:-webkit-linear-gradient(top,#fff,#f1f1f1);
+	background:-ms-linear-gradient(top,#fff,#f1f1f1);
+}
+.light h1{
+	background:url(logo.gif) no-repeat center -10px;
+}
+.light .tree li a{
+	color:#8b8b8b;
+}
+.light .tree li:last-child a{
+	color:#222;
+}
+.light .tree li a:hover{
+	color:#444 ;
+}
+.light .tree li.file a{
+	color:#db6123;
+}
+.light .tree li{
+	border-left:1px solid #e1e1e1;
+	border-right:1px solid #fff;
 }
 .nil{
 	clear:both !important;
-        padding:0 !important;
-        margin:0 !important;
-        position:static !important;
+    padding:0 !important;
+    margin:0 !important;
+    position:static !important;
 }
 .full{
 	width:100%;
@@ -112,26 +174,17 @@ a.git:hover{
 }
 .tree li{
 	display:inline-block;
-	border-left:1px solid #666;
 }
 .tree li:first-child{
 	border-left:0;
 }
-.tree li a:hover{
-	color:#aaa;
-}
-.tree li:last-child a{
-	color:#fff;
+.tree li:last-child{
+	border-right:0;
 }
 .tree li a{
-	padding:4px 10px;
+	padding:15px 15px 14px 15px;
 	display:block;
-	font-size:1.5em;
-	color:#777;
-}
-.tree li.file a{
-	font-style:italic;
-	color:#f9a785;
+	font-size:1.4em;
 }
 .back .wrapper{
 	padding:80px 0 25px 0;
@@ -140,7 +193,7 @@ a.git:hover{
 	background:#fff;
 	color:#444;
 	padding:50px;
-	box-shadow: 0px 0px 10px 1px #e2e2e2;
+	box-shadow: 0px 0px 0px 1px #e3e3e3;
 }
 .page b.center{
 	text-align: center;
@@ -201,6 +254,9 @@ a.git:hover{
 }
 .fm .video span{
 	background-position:-84px 0;
+}
+.fm .pdf span{
+	background-position:-101px 0;
 }
 .fm .audio span{
 	background-position:0px -17px;
@@ -294,6 +350,15 @@ a.git:hover{
 	font-family: "HelveticaNeue-Light", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 	line-height: 1.8;
 }
+.markdown strong{
+	font-weight:bold;
+}
+.markdown blockquote{
+	padding:15px 20px;
+	border:1px solid #ddd;
+	background:#f8f8f8;
+	border-radius:4px;
+}
 .markdown pre{
 	white-space:pre-wrap;
 	border-top:1px dashed #aaa;
@@ -317,17 +382,21 @@ a.git:hover{
 	}
 	.top{
 		position:relative;
+		height:auto;
+		text-align:center;
+	}
+	.top .wrapper>*{
+		float:none;
+		text-align:center;
 	}
 	.back .wrapper{
 		padding-top: 10px;
 	}
+	.top h1{
+		width:auto;
+	}
 	a.git{
 		display:none !important;
-	}
-	.top .wrapper>*{
-		float:none !important;
-		text-align:center;
-		margin:0;
 	}
 	.page{
 		padding:25px;
@@ -344,17 +413,17 @@ a.git:hover{
 	}
 }
 @media all and (max-width: 550px) and (min-width: 0px) {
+	.top{
+		height:auto;
+		text-align:center;
+	}
 	.top .wrapper>*{
 		float:none;
 		text-align:center;
-		padding:10px 0;
 	}
 	.page{
 		padding:25px;
 		font-size:.72em;
-	}
-	.tree li a,.tree li.file{
-		padding:10px;
 	}
 	.tree li{
 		display:block;
