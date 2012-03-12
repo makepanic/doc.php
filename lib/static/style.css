@@ -359,6 +359,9 @@ a.git:hover{
 	background:#f8f8f8;
 	border-radius:4px;
 }
+.markdown blockquote p{
+	margin:0;
+}
 .markdown pre{
 	white-space:pre-wrap;
 	border-top:1px dashed #aaa;
@@ -371,7 +374,8 @@ a.git:hover{
 	font-family:monospace;
 }
 .markdown li{
-	margin:.8em 0;
+	margin:.4em 0;
+	line-height:1.8em;
 }
 .markdown img{
 	max-width:100%;
