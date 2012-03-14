@@ -206,24 +206,11 @@ a.git:hover{
 }
 .page ul.fm{
 	list-style-type: none;
-	font-size:1.7em;
 	padding-left:0px;
 	margin:0;
 }
-.fm.big li{
-	display:inline-block;
-	height:200px;
-	width:25%;
-}
-.fm.big li span{
-	margin:0 auto;
-	display:block;
-	position:relative;
-}
-.fm.big li a{
-	margin-left:0;
-	display:block;
-	text-align:center;
+.fm li>*{
+	font-size:1.7em;
 }
 .fm li a{
 	border-bottom:0;

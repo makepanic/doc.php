@@ -9,6 +9,7 @@ doc.php was created by [@makepanic](https://twitter.com/makepanic).
 * parse files the way you want
 * limits the access to a defined root folder
 * individual rules for extensions
+* displays `.info` files inside the filemanager
 
 ##Installation
 1. download [doc.php](https://github.com/makepanic/doc.php) from github.
