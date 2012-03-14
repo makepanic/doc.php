@@ -11,8 +11,7 @@ require('config.php');
 
 define('STYLE',LIB.'static/style.css'); //Stylesheet file path
 define('SCRIPT',LIB.'static/script.js'); //Javascript file path
-define('ROOT_FILE',$_SERVER['PHP_SELF']); //this file
-
+define('ROOT_FILE',$_SERVER['SCRIPT_NAME']); //this file
 define('HTACCESS',false); //TODO
 
 require(LIB.'wiki.class.php');
