@@ -22,7 +22,7 @@ class View{
                 if($obj->hasListStyle()){
                     $text.='<li class="'.$tp.'">'.$obj->getListStyle().'</li>';
                 }else{
-                    $text.='<li class="'.$tp.'"><span></span><a href="'.wiki::makeLink($obj).'">'.$obj->getName().'</a></li>';
+                    $text.='<li class="'.$tp.'"><span></span><a href="'.wiki::makeLink($obj).'">'.$obj->getName().((SHOW_EXTENSIONS)?$obj->getFileType():'').'</a></li>';
                 }
             }
             $text.='</ul>';
@@ -34,6 +34,7 @@ class View{
             if($path->hasDetails()){
                 if($pathString!=='file'){
                     $text=$path->getDetailCode();
+                    $text.=$path->getExtension()->getDownloadElement($path);
                 }else{
                     $text='<div class="markdown">'.Markdown($content).'</div>';
                 }

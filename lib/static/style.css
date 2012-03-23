@@ -290,6 +290,19 @@ a.git:hover{
 .page video{
 	max-width:100%;
 }
+.page a.download{
+	background:#f8f8f8;
+	color:#999;
+	border:1px solid #ddd;
+	font-size:1.2em;
+	padding:5px 10px;
+	font-weight:bold;
+	border-radius:3px;
+}
+.page a.download:hover{
+	background:#fcfcfc;
+	color:#666;
+}
 /*MARKDOWN style*/
 .markdown{
 	font-size:1.6em;
@@ -357,8 +370,8 @@ a.git:hover{
 	font-family:monospace;
 }
 .markdown code{
-	font-size:.9em;
-	font-family:monospace;
+	font: normal normal 400 16px/16px monospace;
+	line-height:16px;
 }
 .markdown li{
 	margin:.4em 0;

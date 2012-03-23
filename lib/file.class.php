@@ -1,12 +1,12 @@
 <?php
 class File{
 	private $name;
+    private $fileType=null;
+    private $extension=null;
 	private $path;
 	private $pathString;
-    private $fileType=null;
 	private $type=-1;
     private $fileString="";
-    private $extension=null;
 
     public function readFile(){
         $pathStr=$this->getFullString(true);
@@ -28,9 +28,8 @@ class File{
         
     }
 	public function __construct($path,$name){
-		$this->name=$name;
 		$this->path=$this->parsePath($path);
-		$this->makeType();
+		$this->parseFileString($name);
     }
     public function getPathTo($num){
     	$path="";
@@ -41,15 +40,19 @@ class File{
     }
     public function getFullString($root=false){
         $name="";
-        if (strlen($this->name)>0)$name="/".$this->name;
-    	return (($root)?ROOT_DIR:".").$this->pathString.$name;
+        $extString=((strlen($this->fileType)>0)?".".$this->fileType:"");
+        #if(strlen($this->fileType)>0){$extString=".".$this->fileType};
+        if (strlen($this->name)>0)$name=$this->name;
+    	return (($root)?ROOT_DIR:".").$this->pathString."/".$name.$extString;
     }
-    private function makeType(){
-    	$location=ROOT_DIR.$this->pathString."/".$this->name;
+    private function parseFileString($name){
+    	$location=ROOT_DIR.$this->pathString."/".$name;
     	if(is_dir($location)){
     		$this->type=0;
+            $this->name=$name;
     	}elseif(is_file($location)){
             $this->fileType=pathinfo($location, PATHINFO_EXTENSION);
+            $this->name=pathinfo($location, PATHINFO_FILENAME);
     		$this->type=1;
             $this->makeFileString();
     	}else{
@@ -113,6 +116,9 @@ class File{
         }
         Notification::Error("Something is wrong with the File type.");
     }
+    public function getExtension(){
+        return $this->extension;
+    }
     public function needToReadFile(){
         return $this->extension->readsFile();
     }
@@ -126,7 +132,8 @@ class File{
     	return $this->pathString;
     }
     public function getFileType(){
-        return $this->fileType;
+        $extString=((strlen($this->fileType)>0)?".".$this->fileType:"");
+        return $extString;
     }
     public function getListStyle(){
         return $this->extension->getListStyle($this);

@@ -1,6 +1,7 @@
 <?php
 class ImageExtension extends Extension{
 	protected $allowDetail = true;
+	protected $allowDownload = true;
 	protected $extensionString = 'image';
 
 	public function getDetailCode($fileObj){

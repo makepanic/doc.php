@@ -1,6 +1,7 @@
 <?php
 class CodeExtension extends Extension{
 	protected $allowDetail = true;
+	protected $allowDownload = true;
 	protected $extensionString = 'code';
 
 	public function getDetailCode($fileObj){

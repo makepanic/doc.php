@@ -4,6 +4,7 @@ class Extension{
 	protected static $classArray=array();
 	protected $extensionString = "";
 	protected $allowDetail = false;
+	protected $allowDownload = false;
 	protected $hasListLayout = false;
 	protected $readFile = false;
 	protected static $extCount = 0;
@@ -56,6 +57,12 @@ class Extension{
 	}
 	public function getDetailCode($fileObj){
 		return "no specific code defined";
+	}
+	public function getDownloadElement($fileObj){
+		if($this->allowDownload){
+			$fullString = $fileObj->getFullString(true);
+			return '<div class="center"><a class="download" title="click to download" href="'.$fullString.'">download '.$fileObj->getName().$fileObj->getFileType().'</a></div>';
+		}
 	}
 	public function getExtensionString(){
 		return $this->extensionString;

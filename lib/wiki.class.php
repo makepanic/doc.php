@@ -22,7 +22,7 @@ class Wiki{
 				for($i=0;$i<count($obj);$i++){
 					$link.=$i."=".$obj[$i]."&";
 				}
-				if($array->getType()==1)$link.="file=".$array->getName();
+				if($array->getType()==1)$link.="file=".$array->getName().$array->getFileType();
 				elseif($array->getType()==0)$link.=$i."=".$array->getName();
 			}
 		}
@@ -30,6 +30,10 @@ class Wiki{
 	}
 	private static function loadFolder($path){
 		$dir=scandir($path->getFullString(true));
+		//sort the array for aAbB...
+		natcasesort($dir);
+		//write new ordered array
+		$dir=array_values($dir);
 		$folderArray=array();
 		for($i=2;$i<count($dir);$i++){
 			array_push($folderArray, new File($path->getPath(),$dir[$i]));

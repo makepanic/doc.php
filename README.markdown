@@ -27,22 +27,22 @@ doc.php was created by [@makepanic](https://twitter.com/makepanic).
 ###Additional Config
 open `config.php` and modify the define() commands if you want
 
-	DOC_TITLE:   default: 'doc.php'
-				 this string sets the title of the navigation bar
-	ROOT_DIR:	 default: 'docs'
-				 this string sets the root folder for your docphp presentation
-	MAX_NAV :	 default: '4'
-				 maximum number of breadcrumbs to dispay in the top navigation
-	SHORTEN_NAV: default: '15'
-				 maximum number of characters in the top navigation per folder
-	THEME:   	 default: 'light'
-				 this string sets the title of the navigation bar
-				 choose between 'dark' and 'light'
+	DOC_TITLE:   		default: 'doc.php'
+				 		this string sets the title of the navigation bar
+	ROOT_DIR:	 		default: 'docs'
+				 		this string sets the root folder for your docphp presentation
+	MAX_NAV :	 		default: '4'
+				 		maximum number of breadcrumbs to dispay in the top navigation
+	SHORTEN_NAV: 		default: '15'
+				 		maximum number of characters in the top navigation per folder
+	THEME:   	 		default: 'light'
+				 		this string sets the title of the navigation bar
+				 		choose between 'dark' and 'light'
+	SHOW_EXTENSIONS:   	default: 'false'
+						enable if you want to display file extensions
 
 ###License
 [WTFPL](http://sam.zoy.org/wtfpl/)
 
 ####TODO
-* download option
-* add more extensions
 * htaccess options for better links
