@@ -6,6 +6,7 @@ $template='<html lang="de">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>%%PAGETITLE%%</title>
 		<link rel="stylesheet" type="text/css" title="" media="all" href="%%STYLE%%" />
+		%%HEAD%%
 	</head>
 	<body class="%%THEME%%bg">
 		<div class="top full %%THEME%%">

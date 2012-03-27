@@ -100,6 +100,7 @@ class View{
         $template=str_replace('%%STYLE%%',STYLE,$template);
         $template=str_replace('%%SCRIPT%%',SCRIPT,$template);
         $template=str_replace('%%THEME%%',THEME,$template);
+        $template=str_replace('%%HEAD%%',Layout::getBakedHead(),$template);
         return $template;
     }
 }

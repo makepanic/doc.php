@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 */
 
-define('DOCPHP_VERSION',1.1);
+define('DOCPHP_VERSION',1.15);
 
 require('config.php');
 
@@ -14,6 +14,7 @@ define('SCRIPT',LIB.'static/script.js'); //Javascript file path
 define('ROOT_FILE',$_SERVER['SCRIPT_NAME']); //this file
 define('HTACCESS',false); //TODO
 
+require(LIB.'layout.class.php');
 require(LIB.'wiki.class.php');
 require(LIB.'file.class.php');
 require(LIB.'view.class.php');
