@@ -226,6 +226,7 @@ a.git:hover{
 	margin-left:0;
 }
 .fm li span{
+	z-index:1;
 	width:17px;
 	height:17px;
 	position:absolute;
@@ -259,6 +260,9 @@ a.git:hover{
 	font-family:monospace;
 	margin:0 10px;
 	font-size:.8em;
+}
+.fm .audio .buf{
+	background:#eee;
 }
 .fm .file span{
 	background-position:-34px 0;
@@ -366,7 +370,7 @@ a.git:hover{
 	margin:0;
 }
 .markdown pre{
-	white-space:pre-wrap;
+	overflow:auto;
 	border-top:1px dashed #aaa;
 	border-bottom:1px dashed #aaa;
 	padding:1em 0 1em 10px;
@@ -414,9 +418,6 @@ a.git:hover{
 	}
 	.markdown ol, .markdown ul {
 		padding-left:0;
-	}
-	pre{
-		white-space:pre-wrap;
 	}
 }
 @media all and (max-width: 550px) and (min-width: 0px) {
