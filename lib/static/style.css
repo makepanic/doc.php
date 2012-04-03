@@ -240,7 +240,7 @@ a.git:hover{
 .fm .music span{
 	background-position:-51px 0;
 }
-.fm .code span{
+.fm .code span,.fm .exe span{
 	background-position:-68px 0;
 }
 .fm .video span{
