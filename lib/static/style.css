@@ -249,6 +249,9 @@ a.git:hover{
 .fm .pdf span{
 	background-position:-101px 0;
 }
+.fm .unknown span{
+	background-position:-118px 0;
+}
 .fm .audio span{
 	background-position:0px -17px;
 }
@@ -264,7 +267,7 @@ a.git:hover{
 .fm .audio .buf{
 	background:#eee;
 }
-.fm .file span{
+.fm .text span{
 	background-position:-34px 0;
 }
 .fm .image span{

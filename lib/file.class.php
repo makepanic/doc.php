@@ -23,7 +23,13 @@ class File{
         if($this->extension){
             return $this->extension->getParsedContent($this);
         }else{
-            return $this->readFile();
+            if(strlen($this->fileType)>0){
+                $ext=htmlspecialchars($this->fileType);
+                $fullname=$this->name.".".$ext;
+                return '<div class="markdown"><h2>'.$fullname.'</h2><p>Sorry I have no idea how to handle this file. Really need "<strong>.'.$ext.'</strong>" support? Send me a <a href="http://twitter.com/home?status=hey @makepanic , don\'t be lazy, add '.$ext.' support to doc.php">tweet</a></p></div><div class="center"><a class="download" href="'.$this->getFullString(true).'">download "'.$fullname.'"</a></div>';
+            }else{
+                return '<div class="markdown"><p>Sorry i can\'t handle a file without file extension. Please make sure you didn\'t accidentally a extension.</p></div><div class="center"><a class="download" href="'.$this->getFullString(true).'">download "'.$this->name.'"</a></div>';
+            }
         }
         
     }
@@ -41,7 +47,6 @@ class File{
     public function getFullString($root=false){
         $name="";
         $extString=((strlen($this->fileType)>0)?".".$this->fileType:"");
-        #if(strlen($this->fileType)>0){$extString=".".$this->fileType};
         if (strlen($this->name)>0)$name=$this->name;
     	return (($root)?ROOT_DIR:".").$this->pathString."/".$name.$extString;
     }
@@ -61,23 +66,15 @@ class File{
     }
     private function makeFileString(){
         if($this->type==1){
-            //check if image file
+            $this->fileString="unknown";
             if(strlen($this->fileType)>0){
-                //add filters for more filterstrings
                 $className=Extension::getClassName($this->fileType);
                 if($className){
                     $this->extension=new $className();
                     $this->fileString=$this->extension->getExtensionString();
-                }else{
-                    $this->fileString="file";
                 }
-            }else{
-                $this->fileString="file";
             }
         }
-    }
-    private function getFileExtension($file_name){
-        return substr(strrchr($file_name,'.'),1);
     }
     private function parsePath($path){
     	if(is_array($path)){
@@ -139,7 +136,7 @@ class File{
         return $this->extension->getListStyle($this);
     }
     public function hasDetails(){
-        if($this->fileString=="file"){
+        if($this->fileString=="unknown"){
             return true;
         }else{
             return $this->extension->allowsDetails();

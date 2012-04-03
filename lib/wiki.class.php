@@ -49,11 +49,11 @@ class Wiki{
 				return static::loadFolder($path);
 			}elseif($pathType==1){
 				//is file
-				if($path->getTypeString()=="file" || $path->needToReadFile()){
+				if($path->getTypeString()=="unknown" || $path->needToReadFile()){
 					//Read file if type = file
 					return $path->getContent();
 				}else{
-					return null;
+					return "aaa";#Notification::Error($pathStr." not found");
 				}
 			}else{
 				Notification::Error($pathStr." not found");

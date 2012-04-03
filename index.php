@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 */
 
-define('DOCPHP_VERSION',1.1);
+define('DOCPHP_VERSION',1.2);
 
 require('config.php');
 
