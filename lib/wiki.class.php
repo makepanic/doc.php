@@ -53,7 +53,7 @@ class Wiki{
 					//Read file if type = file
 					return $path->getContent();
 				}else{
-					return "aaa";#Notification::Error($pathStr." not found");
+					return null;
 				}
 			}else{
 				Notification::Error($pathStr." not found");
