@@ -37,7 +37,7 @@ q:before, q:after {
 	content: none;
 }
 pre code {
-	background:#fff !important;
+	background:transparent !important;
 }
 table {
 	border-collapse: collapse;
@@ -211,6 +211,28 @@ a.git:hover{
 	list-style-type: none;
 	padding-left:0px;
 	margin:0;
+}
+.sneak{
+	transition:height .4s,opacity .4s;
+	-o-transition:height .4s,opacity .4s;
+	-moz-transition:height .4s,opacity .4s;
+	-webkit-transition:height .4s,opacity .4s;
+	-ms-transition:height .4s,opacity .4s;
+	opacity:.7;
+	height:60px;
+	position:relative;
+}
+.sneak:hover{
+	opacity:1;
+	height:300px;
+}
+.sneak p{
+	background:rgba(0,0,0,.6);
+	padding:10px;
+	color:#fff;
+	position:absolute;
+	right:0;
+	bottom:0;
 }
 .fm li>*{
 	font-size:1.7em;

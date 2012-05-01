@@ -33,7 +33,22 @@ class View{
             $pathString=$path->getTypeString();
             if($path->hasDetails()){
                 if($pathString!=='unknown'){
-                    $text=$path->getDetailCode();
+                    if($path->usesCache()){
+                        $fullPath=$path->getFullString(true);
+                        if(Cache::wasCached($fullPath,$path->getCacheTimeout())){
+                            #wurde gecached
+                            ob_start();
+                            include(Cache::getCachedFile($fullPath));
+                            $text=ob_get_contents();
+                            ob_end_clean();
+                        }else{
+                            $text=$path->getDetailCode();
+                            Cache::cacheFile($fullPath,$text);
+                        }
+                    }else{
+                        $text=$path->getDetailCode();
+                        
+                    }
                     $text.=$path->getExtension()->getDownloadElement($path);
                 }else{
                     $text=$content;

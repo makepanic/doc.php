@@ -14,5 +14,5 @@ class CodeExtension extends Extension{
 	}
 }
 $ext=new CodeExtension();
-$ext->register(array('php','js','java','vb','cs','html','css'));
+$ext->register(array('php','js','java','vb','cs','html','css','py'));
 ?>

@@ -31,7 +31,6 @@ class File{
                 return '<div class="markdown"><p>Sorry i can\'t handle a file without file extension. Please make sure you didn\'t accidentally a extension.</p></div><div class="center"><a class="download" href="'.$this->getFullString(true).'">download "'.$this->name.'"</a></div>';
             }
         }
-        
     }
 	public function __construct($path,$name){
 		$this->path=$this->parsePath($path);
@@ -116,6 +115,9 @@ class File{
     public function getExtension(){
         return $this->extension;
     }
+    public function getCacheTimeout(){
+        return $this->extension->getCacheTimeout();
+    }
     public function needToReadFile(){
         return $this->extension->readsFile();
     }
@@ -144,6 +146,9 @@ class File{
     }
     public function getDetailCode(){
         return $this->extension->getDetailCode($this);
+    }
+    public function usesCache(){
+        return $this->extension->usesCache();
     }
     public function hasListStyle(){
         //check if extension object exists and if this object has a special list layout

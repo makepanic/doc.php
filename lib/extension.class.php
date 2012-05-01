@@ -2,13 +2,16 @@
 class Extension{
 	protected static $extArray=array();
 	protected static $classArray=array();
+	protected static $extCount = 0;
+	protected static $classCount = 0;
+
 	protected $extensionString = "";
 	protected $allowDetail = false;
 	protected $allowDownload = false;
 	protected $hasListLayout = false;
 	protected $readFile = false;
-	protected static $extCount = 0;
-	protected static $classCount = 0;
+	protected $caching = false;
+	protected $cacheTimeout = 0; //in seconds
 
 	public static function loadExtensions(){
 		foreach (glob(LIB.'extensions/extension.*.php') as $filename)
@@ -51,6 +54,13 @@ class Extension{
 		}else{
 			return false;
 		}
+	}
+	public function usesCache(){
+		#echo get_class($this)." caching:".($this->caching?"ja":"nein");
+		return $this->caching;
+	}
+	public function getCacheTimeout(){
+		return $this->cacheTimeout;
 	}
 	public function readsFile(){
 		return $this->readFile;
