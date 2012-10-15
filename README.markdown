@@ -43,6 +43,3 @@ open `config.php` and modify the define() commands if you want
 
 ###License
 [WTFPL](http://sam.zoy.org/wtfpl/)
-
-####TODO
-* htaccess options for better links
