@@ -2,6 +2,8 @@
 doc.php is a PHP application that mimics a file explorer. 
 Using html5 to display audio and video and [PHP markdown by Michel Fortin](http://michelf.com/projects/php-markdown/) to parse these files into a simple but interactive file browser.
 
+A live example is avaiable [here](http://rndm.de/doc/index.php)
+
 doc.php was created by [@makepanic](https://twitter.com/makepanic).
 
 ##What does it do?
