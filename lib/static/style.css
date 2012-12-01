@@ -439,10 +439,12 @@ a.git:hover{
 	margin: 0;
 	padding: 6px 13px;
 }
-.markdown table tr th :first-child, table tr td :first-child {
+.markdown table tr th :first-child, 
+.markdown table tr td :first-child {
 	margin-top: 0;
 }
-.markdown table tr th :last-child, table tr td :last-child {
+.markdown table tr th :last-child,
+.markdown table tr td :last-child {
 	margin-bottom: 0;
 }
 
