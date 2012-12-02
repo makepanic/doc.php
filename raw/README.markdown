@@ -2,6 +2,8 @@
 doc.php is a PHP application that mimics a file explorer. 
 Using html5 to display audio and video and [PHP markdown by Michel Fortin](http://michelf.com/projects/php-markdown/) to parse these files into a simple but interactive file browser.
 
+A live example is available [here](http://rndm.de/doc/index.php)
+
 doc.php was created by [@makepanic](https://twitter.com/makepanic).
 
 ##What does it do?
@@ -32,7 +34,7 @@ open `config.php` and modify the define() commands if you want
 	ROOT_DIR:	 		default: 'docs'
 				 		this string sets the root folder for your docphp presentation
 	MAX_NAV :	 		default: '4'
-				 		maximum number of breadcrumbs to dispay in the top navigation
+				 		maximum number of breadcrumbs to display in the top navigation
 	SHORTEN_NAV: 		default: '15'
 				 		maximum number of characters in the top navigation per folder
 	THEME:   	 		default: 'light'
@@ -43,6 +45,3 @@ open `config.php` and modify the define() commands if you want
 
 ###License
 [WTFPL](http://sam.zoy.org/wtfpl/)
-
-####TODO
-* htaccess options for better links

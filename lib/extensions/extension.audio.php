@@ -6,12 +6,14 @@ class AudioExtension extends Extension{
 
 	public function getListStyle($fileObj){
 		$name=$fileObj->getName().((SHOW_EXTENSIONS)?$fileObj->getFileType():'');
-		$wireframe='<span class="controls" onclick="play(this)"></span>
-                    <audio title="'.$name.'" id="audioPlayer" src="'.$fileObj->getFullString(true).'" preload="auto" autobuffer>
-                    </audio>
-                    <a class="title">'.$name.'</a>
-                    <div class="nil"></div>';
-        return $wireframe;
+    $src = $fileObj->getPath()->toFullString();
+		$wireframe = 
+    '<span class="controls" onclick="play(this)"></span>
+    <audio title="'.$name.'" id="audioPlayer" src="'.$src.'" preload="auto" autobuffer>
+    </audio>
+    <a class="title">'.$name.'</a>
+    <div class="nil"></div>';
+    return $wireframe;
 	}
 }
 

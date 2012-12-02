@@ -7,7 +7,7 @@ class InfoExtension extends Extension{
 	public function getListStyle($fileObj){
 		//<span class="full"></span>
 		$wireframe='<div class="markdown">'.Markdown($fileObj->readFile()).'</div>';
-        return $wireframe;
+    return $wireframe;
 	}
 }
 

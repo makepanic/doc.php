@@ -1,13 +1,13 @@
 <?php
 class Layout{
 	private static $head=array();
-	public static function addScriptSrc($src){
+	public static function addScript($src){
 		static::addHeadElement('<script src="'.$src.'"></script>',true);
 	}
-	public static function addStyleSrc($src){
+	public static function addStyle($src){
 		static::addHeadElement('<link rel="stylesheet" href="'.$src.'">',true);
 	}
-	public static function addScript($script){
+	public static function addScriptInline($script){
 		static::addHeadElement('<script>'.$script.'</script>',true);
 	}
 	private static function addHeadElement($src,$ifExists=false){

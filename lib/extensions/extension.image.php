@@ -6,19 +6,22 @@ class ImageExtension extends Extension{
 	protected $extensionString = 'image';
 
 	public function getListStyle($fileObj){
-		$path=$fileObj->getFullString(true);
-		$name=$fileObj->getName();
+		$path = $fileObj->getPath();
+		$pathString = $fileObj->toFullPathString(true);
+		$name = $fileObj->getName();
+		$url = FileSystemHelper::linkTo($path, count($path->toArray()), true);
 		$wireframe='
-		<a href="'.$path.'">
-			<div class="sneak" style="background:url(\''.$path.'\') center center no-repeat">
+		<a href="'.$url.'">
+			<div class="sneak" style="background:url(\''.$pathString.'\') center center no-repeat">
 				<p>'.$name.'</p>
 			</div>
 		</a>';
-        return $wireframe;
+		return $wireframe;
 	}
 
 	public function getDetailCode($fileObj){
-		return '<div class="markdown center"><img src="'.$fileObj->getFullString(true).'" alt="#"/></div>';
+		$path=$fileObj->toFullPathString(true);
+		return '<div class="markdown"><h2>'.$fileObj->getName().'</h2></div><div class="markdown center"><img src="'.$path.'" alt="#"/></div>';
 	}
 }
 

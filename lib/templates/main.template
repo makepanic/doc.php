@@ -1,0 +1,27 @@
+<html lang="de">
+  <head>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><?php echo $this->title; ?></title>
+    <link rel="stylesheet" type="text/css" title="" media="all" href="<?php echo $this->style; ?>" />
+    <?php echo $this->head; ?>
+  </head>
+  <body class="<?php echo $this->theme; ?>bg">
+    <div class="top full <?php echo $this->theme; ?>">
+      <div class="wrapper">
+        <h1><?php echo $this->docTitle; ?></h1>
+        <ul class="tree">
+          <?php echo $this->navigation; ?>
+        </ul>
+      </div>
+    </div>
+    <div class="full back">
+      <div class="wrapper">
+        <div class="page"><?php echo $this->content; ?></div>
+        <a class="git" href="https://github.com/makepanic/doc.php">doc.php on github</a>
+      </div>
+    </div>
+    <?php echo $this->script; ?>
+  </body>
+</html>
