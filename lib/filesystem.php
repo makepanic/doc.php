@@ -28,14 +28,18 @@ class DocPHP{
   private function loadFolder(){
     $pathString = $this->path->toFullString();
     $pathArray = $this->path->toArray();
-    $this->name = $pathArray[count($pathArray)-2];
+    if(count($pathArray)-2 > -1){
+      $this->name = $pathArray[count($pathArray)-2];
+    }else{
+      $this->name = "";
+    }
     $this->name = strlen($this->name) > 0 ? $this->name : DOC_TITLE;
     $dir = scandir($pathString);
     natcasesort($dir);
     $dir=array_values($dir);
     $listItems = array();
 
-    if(count($this->path->toArray())>0 && strlen($this->path->toArray()[0]) > 0){
+    if(count($pathArray)>0 && strlen($pathArray[0]) > 0){
       array_push($listItems, '<li class="jump"><a href="..">..</a></li>');
     }
 

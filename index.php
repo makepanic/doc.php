@@ -1,9 +1,9 @@
 <?php
-define('DOCPHP_VERSION',1.4);
+define('DOCPHP_VERSION',1.5);
 
 require('config.php');
 
-define('STYLE','/' . LIB . 'static/style.css'); //Stylesheet file path
+define('STYLE','./' . LIB . 'static/style.css'); //Stylesheet file path
 define('SCRIPT','/' . LIB . 'static/script.js'); //Javascript file path
 define('ROOT_FILE', HTACCESS ? '' : $_SERVER['SCRIPT_NAME'] . '?path='); //this file
 
@@ -17,7 +17,6 @@ require(LIB.'layout.class.php');
 require(LIB.'markdown.php');
 
 Extension::loadExtensions();
-
 $doc = new DocPHP($_GET);
 
 ?>
