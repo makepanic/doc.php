@@ -28,7 +28,7 @@ class File{
                 $fullname=$this->name.".".$ext;
                 return '<div class="markdown"><h2>'.$fullname.'</h2><p>Sorry I have no idea how to handle this file. Really need "<strong>.'.$ext.'</strong>" support? Send me a <a href="http://twitter.com/home?status=hey @makepanic , don\'t be lazy, add '.$ext.' support to doc.php">tweet</a></p></div><div class="center"><a class="download" href="'.$src.'">download "'.$fullname.'"</a></div>';
             }else{
-                return '<div class="markdown"><p>Sorry i can\'t handle a file without file extension. Please make sure you didn\'t accidentally a extension.</p></div><div class="center"><a class="download" href="'.$this->path->toFullString().'">download "'.$this->name.'"</a></div>';
+                return '<div class="markdown"><p>Sorry i can\'t handle a file without file extension. Please make sure you didn\'t accidentally a extension.</p></div><div class="center"><a class="download" href="'.$this->path->toFullString(true).'">download "'.$this->name.'"</a></div>';
             }
         }
     }
@@ -109,7 +109,6 @@ class File{
         return $this->extension->usesCache();
     }
     public function hasListStyle(){
-        //check if extension object exists and if this object has a special list layout
         if($this->extension && $this->extension->hasListLayout()){
                 return true;
         }

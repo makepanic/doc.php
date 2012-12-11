@@ -82,6 +82,9 @@ a.git{
 a.git:hover{
 	color:#666;
 }
+.darkbg .git{
+	color:#5B5B5B;
+}
 .center{
 	text-align:center;
 }
@@ -96,7 +99,7 @@ a.git:hover{
 	float:left;
 }
 .darkbg{
-	background:#ededed;
+	background:#202020;
 }
 .lightbg{
 	background:#f7f7f7;

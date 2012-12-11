@@ -6,7 +6,7 @@ class AudioExtension extends Extension{
 
 	public function getListStyle($fileObj){
 		$name=$fileObj->getName().((SHOW_EXTENSIONS)?$fileObj->getFileType():'');
-    $src = $fileObj->getPath()->toFullString();
+    $src = $fileObj->getPath()->toFullString(true);
 		$wireframe = 
     '<span class="controls" onclick="play(this)"></span>
     <audio title="'.$name.'" id="audioPlayer" src="'.$src.'" preload="auto" autobuffer>

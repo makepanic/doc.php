@@ -1,7 +1,9 @@
 <?php
 
 class FileSystemHelper{
-  //splits requestpath to dir array
+  /*
+  * converts array to path
+  */
   public static function makePath($pathArray){
     $pathString = "";
     foreach ($pathArray as $value) {
@@ -11,6 +13,10 @@ class FileSystemHelper{
     $pathArray = static::removeUnwanted($pathArray);
     return new Path($pathArray);
   }
+
+  /*
+  * strips unwanted chars/strings from path
+  */
   public static function removeUnwanted($pathArray){
     $unwanted = array("..");
     foreach ($pathArray as &$value){
@@ -20,14 +26,18 @@ class FileSystemHelper{
     }
     return $pathArray;
   }
+
+  /*
+  * creates html links for path
+  */
   public static function makePathLink($path){
     $pathArray = $path->toArray();
     if(!$path->isFile()){
       array_pop($pathArray);
     }
     $pathCount = count($pathArray);
-    $string = '<li><a href="'.ROOT_FILE.'/">home</a></li>';
-
+    $rootLink = ROOT_FILE . (HTACCESS ? '/' : '');
+    $string = '<li><a href="' . $rootLink . '">home</a></li>';
     if($pathCount < MAX_NAV){
       $i = 0;
     }else{
@@ -47,6 +57,9 @@ class FileSystemHelper{
 
     return $string;
   }
+  /*
+  * converts path to URL
+  */
   public static function linkTo($path, $depth, $noSlash = false){
     $link = ROOT_FILE . (HTACCESS ? '/' : '');
     $pathArray = $path->toArray();

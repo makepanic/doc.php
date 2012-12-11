@@ -64,6 +64,7 @@ class DocPHP{
     $tpl->content = $this->content;
     $tpl->style = STYLE;
     $tpl->theme = THEME;
+    $tpl->docTitle = DOC_TITLE;
     $tpl->navigation = FileSystemHelper::makePathLink($this->path);
     $tpl->head = Layout::getBakedHead();
     $tpl->script = '<script src="' . SCRIPT . '"></script>';
