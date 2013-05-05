@@ -39,8 +39,15 @@ class DocPHP{
     $dir=array_values($dir);
     $listItems = array();
 
-    if(count($pathArray)>0 && strlen($pathArray[0]) > 0){
-      array_push($listItems, '<li class="jump"><a href="..">..</a></li>');
+    if(count($pathArray) > 0 && strlen($pathArray[0]) > 0){
+
+      if(count($pathArray) - 2 > -1){
+        $href = FileSystemHelper::linkTo($this->path, count($pathArray) - 2);     
+      }else{
+        $href = ROOT_FILE;    
+      }
+
+      array_push($listItems, '<li class="jump"><a href="' . $href .'">..</a></li>');
     }
 
     for ($i=2; $i < count($dir); $i++) {

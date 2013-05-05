@@ -9,6 +9,7 @@ define('SHORTEN_NAV', 15); //char count in nav
 define('LIB', 'lib/'); //Libary path
 define('SHOW_EXTENSIONS', false); //change to display file extensions in list view
 define('HTACCESS', false); //uses better urls if true
+define('APP_FOLDER', basename(dirname($_SERVER['PHP_SELF'])));
 
 define('FILE_ROOT', dirname($_SERVER["REQUEST_URI"]));
 ?>

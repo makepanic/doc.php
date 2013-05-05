@@ -36,7 +36,7 @@ class FileSystemHelper{
       array_pop($pathArray);
     }
     $pathCount = count($pathArray);
-    $rootLink = ROOT_FILE . (HTACCESS ? '/' : '');
+    $rootLink = ROOT_FILE . (HTACCESS ? '/' . APP_FOLDER . '/' : '');
     $string = '<li><a href="' . $rootLink . '">home</a></li>';
     if($pathCount < MAX_NAV){
       $i = 0;
@@ -61,7 +61,7 @@ class FileSystemHelper{
   * converts path to URL
   */
   public static function linkTo($path, $depth, $noSlash = false){
-    $link = ROOT_FILE . (HTACCESS ? '/' : '');
+    $link = ROOT_FILE . (HTACCESS ? '/' . APP_FOLDER . '/' : '');
     $pathArray = $path->toArray();
     for ($i=0; $i < $depth; $i++) {
       if($i + 1 == $depth && $noSlash){

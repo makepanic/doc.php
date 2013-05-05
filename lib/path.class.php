@@ -25,6 +25,6 @@ class Path{
     return $this->isFile;
   }
   public function toFullString($linkable = false){
-    return ($linkable ? "/" : "") . ROOT_DIR . "/" .  $this->pathString;
+    return ($linkable ? "/" . APP_FOLDER . "/" : "") . ROOT_DIR . "/" .  $this->pathString;
   }
 }
